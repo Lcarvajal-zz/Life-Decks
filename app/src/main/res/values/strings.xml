@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Life-Decks</string>
+    <string name="app_name">Life Decks</string>
 
     <string name="hello_world">Hello world!</string>
     <string name="test_yourself">Test Yourself</string>
@@ -7,4 +7,10 @@
     <string name="add_deck">Add Deck</string>
     <string name="edit_deck">Edit Deck</string>
     <string name="action_settings">Settings</string>
+    <string name="drawer_open">Open</string>
+    <string name="drawer_close">Closed</string>
+    <string name="title_activity_select_deck">Select a Deck</string>
+    <string name="action_view_decks">View Decks</string>
+    <string name="action_add">Add</string>
+    <string name="action_cancel">Cancel</string>
 </resources>
