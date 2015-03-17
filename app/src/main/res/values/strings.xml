@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Life-Decks</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="test_yourself">Test Yourself</string>
+    <string name="add_cards">Add Cards</string>
+    <string name="add_deck">Add Deck</string>
+    <string name="edit_deck">Edit Deck</string>
+    <string name="action_settings">Settings</string>
+</resources>
