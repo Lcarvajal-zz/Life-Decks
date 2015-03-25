@@ -6,6 +6,7 @@ package com.lcarvajal.life_decks;
  * Uses GridView to display all decks.
  */
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -13,6 +14,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.GridView;
 import android.widget.Toast;
 
@@ -20,7 +22,7 @@ import android.widget.Toast;
 public class SelectDeck extends ActionBarActivity {
 
     // temporary strings to have a feel for the look
-    private String[] mTitles = {"Deck1", "Deck2", "Deck3", "Deck4", "Deck5", "Deck6"};
+    private String[] mTitles = {"Deck1", "Deck2", "Deck3", "Deck4", "Deck5", "Deck6", "+"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,8 +36,16 @@ public class SelectDeck extends ActionBarActivity {
 
         // On click listener
         gridview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
-                Toast.makeText(SelectDeck.this, "" + position, Toast.LENGTH_SHORT).show();
+            public void onItemClick(AdapterView<?> parent, View v, int position, long id)
+            {
+                // Open Deck on click listeners
+                if( position < (mTitles.length - 1))    // Open Decks
+                    Toast.makeText(SelectDeck.this, "" + position, Toast.LENGTH_SHORT).show();
+                else    // Create new deck
+                {
+                    Intent intent = new Intent(SelectDeck.this, NewDeck.class);
+                    startActivity(intent);
+                }
             }
         });
 

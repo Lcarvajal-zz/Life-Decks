@@ -4,13 +4,71 @@
     android:layout_height="match_parent"
     android:paddingLeft="16dp"
     android:paddingRight="16dp"
-    android:orientation="vertical" >
+    android:orientation="vertical"
+    android:background="#33CC33">
 
-    <Button
-        android:layout_width="100dp"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:orientation="vertical"
+        android:background="@drawable/card"
+        android:id="@+id/card">
+
+    <TextView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
+        android:layout_gravity="center_horizontal"
         android:layout_marginTop="50dp"
-        android:text="Testing"
-        android:id="@+id/testing"/>
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:textSize="25dp"
+        android:textAllCaps="true"
+        android:id="@+id/title"
+        android:text="@string/deck_name"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:id="@+id/info"
+        android:layout_below="@+id/title"
+        android:text="@string/info"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="-15dp"
+        android:layout_below="@+id/card">
+
+        <ImageButton
+            android:id="@+id/edit_button"
+            android:layout_width="130px"
+            android:layout_height="130px"
+            android:layout_gravity="center"
+            android:background="@drawable/edit_card_button"/>
+
+        <ImageButton
+            android:id="@+id/eye_button"
+            android:layout_width="220px"
+            android:layout_height="220px"
+            android:layout_marginLeft="40px"
+            android:layout_marginRight="40px"
+            android:layout_gravity="center"
+            android:background="@drawable/eye_opened_button"/>
+
+        <ImageButton
+            android:id="@+id/add_button"
+            android:layout_width="130px"
+            android:layout_height="130px"
+            android:layout_gravity="center"
+            android:background="@drawable/new_card_button"/>
+
+    </LinearLayout>
+
 </LinearLayout>

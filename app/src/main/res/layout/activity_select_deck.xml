@@ -3,10 +3,11 @@
     android:id="@+id/gridview"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginTop="10dp"
+    android:paddingTop="10dp"
     android:columnWidth="100dp"
     android:numColumns="3"
     android:verticalSpacing="20dp"
     android:stretchMode="spacingWidthUniform"
     android:gravity="center"
-    />
+    android:background="#33CC33" >
+</GridView>

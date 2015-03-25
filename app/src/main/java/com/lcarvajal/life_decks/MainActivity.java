@@ -7,19 +7,28 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 public class MainActivity extends ActionBarActivity {
 
+    boolean openEye = true;
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button button = (Button) findViewById(R.id.testing);
-        button.setOnClickListener(new View.OnClickListener() {
+        final ImageButton eyeButton = (ImageButton) findViewById(R.id.eye_button);
+
+        eyeButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, SelectDeck.class);
-                startActivity(intent);
+                if(openEye) {
+                    eyeButton.setBackgroundResource(R.drawable.eye_closed_button);
+                    openEye = false;
+                }
+                else {
+                    eyeButton.setBackgroundResource(R.drawable.eye_opened_button);
+                    openEye = true;
+                }
             }
         });
     }

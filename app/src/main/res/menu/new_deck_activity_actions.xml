@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:Life-Decks="http://schemas.android.com/apk/res-auto" >
+        <!-- Show Cancel Button -->
+        <item android:id="@+id/action_cancel"
+            android:icon="@drawable/ic_action_cancel"
+            android:title="@string/action_cancel"
+            Life-Decks:showAsAction="always"/>
+</menu>
