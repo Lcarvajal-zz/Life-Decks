@@ -1,13 +1,14 @@
 package com.lcarvajal.life_decks;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 public class MainActivity extends ActionBarActivity {
 
@@ -18,15 +19,18 @@ public class MainActivity extends ActionBarActivity {
         setContentView(R.layout.activity_main);
 
         final ImageButton eyeButton = (ImageButton) findViewById(R.id.eye_button);
+        final TextView info = (TextView) findViewById(R.id.info);
 
         eyeButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 if(openEye) {
                     eyeButton.setBackgroundResource(R.drawable.eye_closed_button);
+                    info.setTextColor(Color.parseColor("#FFFFFF"));
                     openEye = false;
                 }
                 else {
                     eyeButton.setBackgroundResource(R.drawable.eye_opened_button);
+                    info.setTextColor(Color.parseColor("#000000"));
                     openEye = true;
                 }
             }
